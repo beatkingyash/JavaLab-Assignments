@@ -1,0 +1,34 @@
+- Create folder pack --  create java file A inside a pack
+- create java file C outside the pack and run the following commands
+
+student@student-Veriton-M200-H61:~/AS2.Yash.38$ cd pack
+student@student-Veriton-M200-H61:~/AS2.Yash.38/pack$ javac A.java
+student@student-Veriton-M200-H61:~/AS2.Yash.38/pack$ cd
+student@student-Veriton-M200-H61:~$ cd AS2.Yash.38
+student@student-Veriton-M200-H61:~/AS2.Yash.38$ javac C.java
+student@student-Veriton-M200-H61:~/AS2.Yash.38$ java C
+Welcome To Package.    // output
+
+A code :
+
+package pack;
+public class A
+{
+ public void msg()
+ {
+   System.out.println("Welcome To Package.");
+ }
+}
+
+
+C code :
+
+import pack.*;
+class C
+{
+  public static void main(String args[])
+  {
+    pack.A obj = new pack.A();
+    obj.msg();
+  }
+}
