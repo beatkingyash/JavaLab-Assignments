@@ -7,7 +7,7 @@ public class swinge
 {
    public static void main(String args[])
    {
-     JFrame jf = new JFrame("Swing");
+     JFrame jf = new JFrame("Swing - Student");
      Container c = jf.getContentPane();
      
      JLabel l1 = new JLabel("Username");
@@ -19,6 +19,10 @@ public class swinge
      JButton b1 = new JButton("Log In");
      JRadioButton J1 = new JRadioButton("Enginnering");
      JComboBox<String> J2 = new JComboBox<>();
+     
+     // Create checkboxes for Python and Java
+     JCheckBox CheckBox1 = new JCheckBox("Python");
+     JCheckBox CheckBox2 = new JCheckBox("Java");
      
      c.setLayout(new FlowLayout());
      
@@ -35,6 +39,9 @@ public class swinge
      J2.addItem("TY");
      J2.addItem("BTech");
      c.add(J2);
+     
+     c.add(CheckBox1);
+     c.add(CheckBox2);
      
      jf.setSize(400, 400);
      jf.setVisible(true);
